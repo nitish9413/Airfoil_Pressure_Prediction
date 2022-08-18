@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+  
+</head>
+
+<body>
+ <div class="login">
+	    <h1>Airfoil Prediction</h1>
+    <form action="{{ url_for('predict')}}" method="post">
+        
+        <input type="text" name="Frequency" placeholder="Frequency" required="required"> <br>
+        <input type="text" name="angle_of_attack" placeholder="angle of attack" required="required"> <br>
+        <input type="text" name="chord_length" placeholder="chord length" required="required"> <br>
+        <input type="text" name="Free_stream_velocity" placeholder="Free-stream velocity" required="required"> <br>
+        <input type="text" name="suction_area" placeholder="suction area" required="required"> <br>
+        
+        
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+    <br>
+    <br>
+
+        
+
+ </div>
+ {{prediction_text}}
+
+</body>
+</html>
